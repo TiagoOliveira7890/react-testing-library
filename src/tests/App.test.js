@@ -42,7 +42,8 @@ describe('Teste componente <App.js />', () => {
 
   it('Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida', () => {
     const { history } = renderWithRouter(<App />);
-    act(() => { history.push('/pagina/que-nao-existe/'); });
-    expect(screen.getByRole('heading', { name: /page requested not found/i })).toBeInTheDocument();
+    act(() => { history.push('/pagina/pokenaotem/'); });
+    const head = screen.getByRole('heading', { name: /page requested not found/i });
+    expect(head).toBeInTheDocument();
   });
 });
