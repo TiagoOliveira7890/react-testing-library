@@ -85,6 +85,7 @@ describe('Teste o componente <Pokedex.js />', () => {
 
     expect(picachu).toBeInTheDocument();
     userEvent.click(buttonFilter[1]);
+    //
 
     const charmander = screen.getByText(/Charmander/i);
     expect(charmander).toBeInTheDocument();
